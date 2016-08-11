@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Item: MyString
+  Type: MyString
+  Category: MyString
+  Description: MyText
+  Rental_Rate: 9.99
+
+two:
+  Item: MyString
+  Type: MyString
+  Category: MyString
+  Description: MyText
+  Rental_Rate: 9.99

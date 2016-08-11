@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @rental_item.Item %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @rental_item.Type %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @rental_item.Category %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @rental_item.Description %>
+</p>
+
+<p>
+  <strong>Rental rate:</strong>
+  <%= @rental_item.Rental_Rate %>
+</p>
+
+<%= link_to 'Edit', edit_rental_item_path(@rental_item) %> |
+<%= link_to 'Back', rental_items_path %>

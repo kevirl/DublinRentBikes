@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Rental Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Type</th>
+      <th>Category</th>
+      <th>Description</th>
+      <th>Rental rate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rental_items.each do |rental_item| %>
+      <tr>
+        <td><%= rental_item.Item %></td>
+        <td><%= rental_item.Type %></td>
+        <td><%= rental_item.Category %></td>
+        <td><%= rental_item.Description %></td>
+        <td><%= rental_item.Rental_Rate %></td>
+        <td><%= link_to 'Show', rental_item %></td>
+        <td><%= link_to 'Edit', edit_rental_item_path(rental_item) %></td>
+        <td><%= link_to 'Destroy', rental_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rental item', new_rental_item_path %>
