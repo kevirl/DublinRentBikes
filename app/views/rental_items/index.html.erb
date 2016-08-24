@@ -1,20 +1,32 @@
-<p id="notice"><%= notice %></p>
+<div class="page-header">
 
-<h1>Listing Rental Items</h1>
+<h1>Catalogue Items</h1>
 
-<table>
-  <thead>
-    <tr>
+</div>
+
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Dublin Rental Bikes Catalogue 2016 - 2017</div>
+  <div class="panel-body">
+    <p>  Lorem ipsum dolor sit amet, cras cras montes vitae, nibh suscipit morbi sodales vestibulum, urna vitae tellus sagittis, 
+  eget aliquam vestibulum dictum volutpat lorem sed, nisl praesent sem ligula orci curae. Ut cras est eu, metus maecenas 
+  tempor sed semper pulvinar id. Integer wisi nec fusce ac lacus luctus. Ipsum nisl sem lacus, quam nunc eget enim est, eros tortor et 
+  . Integer mi sed dolor ridiculus sed sed, netus nulla eu dapibus nulla, elementum scelerisque vel odio erat et nisl. 
+  Urna facilisis excepteur adipiscing. Vitae velit ipsum libero. Adipiscing aptent quisque vivamus in luctus, id aliquam id, leo 
+  vitae blandit urna sed aliquam eros, risus neque metus in eget semper, eget eget lorem massa sed.</p>
+
+<table class="table">
+  <tr>
       <th>Item</th>
       <th>Type</th>
       <th>Category</th>
       <th>Description</th>
       <th>Rental rate</th>
       <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+  </tr>
+  
+  </div>
+ 
     <% @rental_items.each do |rental_item| %>
       <tr>
         <td><%= rental_item.Item %></td>
@@ -26,10 +38,17 @@
         <td><%= link_to 'Edit', edit_rental_item_path(rental_item) %></td>
         <td><%= link_to 'Destroy', rental_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
-  </tbody>
+  <% end %>
 </table>
 
-<br>
+<div class="panel-footer">
+  <%= link_to 'New Rental item', new_rental_item_path, class: 'btn btn-success' %>
+  </div>
 
-<%= link_to 'New Rental item', new_rental_item_path %>
+  </div>
+
+
+
+
+  
+
