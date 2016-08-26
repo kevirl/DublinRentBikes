@@ -1,0 +1,37 @@
+<div class="page-header">
+
+<h1>User Listing</h1>
+
+</div>
+
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Dublin Rental Bikes Registered Accounts</div>
+  <div class="panel-body">
+
+
+<table class="table">
+  <tr>
+      <th>ID Number</th>
+      <th>Name</th>
+      <th>Email</th>
+  </tr>
+  
+  </div>
+ 
+    <% @user.each do |user| %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.address %></td>
+        <td><%= link_to 'Show', user %></td>
+      </tr>
+  <% end %>
+</table>
+
+<div class="panel-footer">
+  <%= link_to 'New user', signup_path, class: 'btn btn-success' %>
+  </div>
+
+  </div>
