@@ -7,4 +7,8 @@ class StaticPagesController < ApplicationController
 
   def contact_us
   end
+  
+  def phoenixAdmin
+  end
+  
 end

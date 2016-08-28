@@ -14,11 +14,17 @@ Rails.application.routes.draw do
   
   get 'signup' => 'users#new'
   
+  # get 'phoenixAdmin' => 'static_pages#phoenixAdmin'
+  
   get 'catAdmin' => 'rental_items#catAdmin'
+  
+  # get 'userListing' => 'users#phoenixIndex'
   
   get 'accInfo' => 'sessions#accInfo'
   
   get 'booking' => 'orders#new'
+  
+  # get 'phoenixList' => 'orders#phoenixIndex'
   
   get 'login'=> 'sessions#new'
   post 'login' => 'sessions#create'
