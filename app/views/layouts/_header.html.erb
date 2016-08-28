@@ -6,7 +6,7 @@
           <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "Catalogue", cat_path %></li>
           <% if logged_in? %>
-            <li><%= link_to "Rent a Bike", '#' %></li>
+            <li><%= link_to "Rent a Bike", booking_path %></li>
             <li><%= link_to "Account Info", accInfo_path %></li>
             <li><%= link_to "Logout", logout_path, method: "delete" %></li>
             <% else %>

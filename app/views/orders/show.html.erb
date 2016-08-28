@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email Address:</strong>
+  <%= @order.email %>
+</p>
+
+<p>
+  <strong>Bike Selected:</strong>
+  <%= @order.bike %>
+</p>
+
+<p>
+  <strong>Number Required:</strong>
+  <%= @order.num %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @order.start_date %>
+</p>
+
+<p>
+  <strong>Number of Days:</strong>
+  <%= @order.days %>
+</p>
+
+<p>
+  <strong>Contact Number:</strong>
+  <%= @order.contactNum %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', booking_path %>

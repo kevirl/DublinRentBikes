@@ -1,0 +1,50 @@
+<div class="page-header">
+
+<h1>Orders listing</h1>
+
+</div>
+
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Dublin Rental Bikes Orders</div>
+  <div class="panel-body">
+    <p></p>
+
+<table class="table">
+    <tr>
+      <th>Email</th>
+      <th>Bike</th>
+      <th>Num</th>
+      <th>Start date</th>
+      <th>Days</th>
+      <th>Contactnum</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+    
+      </div>
+
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.email %></td>
+        <td><%= order.bike %></td>
+        <td><%= order.num %></td>
+        <td><%= order.start_date %></td>
+        <td><%= order.days %></td>
+        <td><%= order.contactNum %></td>
+        <td><%= order.user_id %></td>
+        <td><%= link_to 'Show', order %></td>
+        <td><%= link_to 'Edit', edit_order_path(order) %></td>
+        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+</table>
+
+<div class="panel-footer">
+  <%= link_to 'New Order', new_order_path %>
+
+  </div>
+
+  </div>
+
+

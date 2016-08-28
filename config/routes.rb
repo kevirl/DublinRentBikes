@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :orders
   #get 'sessions/new'
 
   get 'users/new'
@@ -16,6 +17,8 @@ Rails.application.routes.draw do
   get 'catAdmin' => 'rental_items#catAdmin'
   
   get 'accInfo' => 'sessions#accInfo'
+  
+  get 'booking' => 'orders#new'
   
   get 'login'=> 'sessions#new'
   post 'login' => 'sessions#create'

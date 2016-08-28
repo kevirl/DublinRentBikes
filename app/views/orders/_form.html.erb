@@ -1,0 +1,52 @@
+<% provide(:title, "Booking") %>
+<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+    <div class="field">
+    <%= f.label :user_id, "User ID Number (Available from Account Infromation Page)" %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  
+  <div class="control-group">
+    <%= f.label "Select Bike", class: 'control-label' %>
+    <div class="controls">
+      <%= f.select(:bike, options_for_select([['Mountain - Adult','Mountain - Adult'],['Mountain - Child','Mountain - Child'],
+      ['Touring - Adult Male','Touring - Adult Male'],['Touring - Adult Female','Touring - Adult Female'],
+      ['Touring - Child','Touring - Child']])) %>
+    </div>
+
+  <div class="field">
+    <%= f.label :num, "Number of Bikes Required" %><br>
+    <%= f.number_field :num %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date, "Rental Start Date" %><br>
+    <%= f.date_select :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :days, "Number of Days" %><br>
+    <%= f.number_field :days %>
+  </div>
+  <div class="field">
+    <%= f.label :contactNum, "Contact Phone Number" %><br>
+    <%= f.text_field :contactNum %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
