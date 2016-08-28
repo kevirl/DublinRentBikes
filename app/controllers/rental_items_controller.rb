@@ -6,6 +6,10 @@ class RentalItemsController < ApplicationController
   def index
     @rental_items = RentalItem.all
   end
+  
+  def catAdmin
+    @rental_items = RentalItem.all
+  end
 
   # GET /rental_items/1
   # GET /rental_items/1.json

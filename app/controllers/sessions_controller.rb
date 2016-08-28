@@ -20,4 +20,9 @@ class SessionsController < ApplicationController
     redirect_to root_url
   end
   
+  def accInfo
+    redirect_to current_user
+  end
+  
+  
 end
